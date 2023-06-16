@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Number Table</title>
+  <script>
+    function generateTable() {
+      var n = parseInt(prompt("Enter a number:"));
+
+      if (isNaN(n) || n <= 0) {
+        alert("Please enter a valid positive number.");
+        return;
+      }
+
+      var table = "Number\tSquare\n";
+      for (var i = 1; i <= n; i++) {
+        table += i + "\t" + (i * i) + "\n";
+      }
+
+      alert(table);
+    }
+  </script>
+</head>
+<body>
+  <h1>Number Table</h1>
+  <button onclick="generateTable()">Generate</button>
+</body>
+</html>

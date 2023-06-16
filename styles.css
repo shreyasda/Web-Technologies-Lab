@@ -1,0 +1,16 @@
+table{
+    border: 2px solid black;
+    padding: auto;
+}
+
+tr{
+    align-items: center;
+}
+
+h1{
+    color: brown;
+}
+
+span{
+    color: bl;
+}

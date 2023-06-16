@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>String and Number Operations</title>
+  <script>
+    function findLeftMostVowel(str) {
+      var vowels = "aeiouAEIOU";
+      for (var i = 0; i < str.length; i++) {
+        if (vowels.indexOf(str[i]) !== -1) {
+          return i;
+        }
+      }
+      return -1; // Return -1 if no vowels found
+    }
+
+    function reverseNumber(num) {
+      var reversed = 0;
+      var num1 = num;
+      while (num !== 0) {
+        reversed = (reversed * 10) + (num % 10);
+        num = Math.floor(num / 10);
+      }
+
+      var reverse = Number(String(num1).split('').reverse().join(''))
+      return reversed;
+    }
+
+    function processString() {
+      var inputString = prompt("Enter a string:");
+      var leftMostVowel = findLeftMostVowel(inputString);
+      alert("The position of the left-most vowel in the string is: " + leftMostVowel);
+    }
+
+    function processNumber() {
+      var inputNumber = parseInt(prompt("Enter a number:"));
+      var reversedNumber = reverseNumber(inputNumber);
+      alert("The number with its digits in reverse order is: " + reversedNumber);
+    }
+  </script>
+</head>
+<body>
+  <h1>String and Number Operations</h1>
+  <button onclick="processString()">Find Left-Most Vowel</button>
+  <button onclick="processNumber()">Reverse Number</button>
+</body>
+</html>
